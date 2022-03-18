@@ -1,20 +1,31 @@
 ﻿@page "/ResizablePanel"
 
 
-<div style="width: 500px">
+<div style="width: 1000px; height: 500px;" class="d-flex flex-row">
 
-	<MudResizablePanel>
+	<MudResizablePanel IsVertical="true" Class="pr-2">
 		
 		<Panel1>
-			<MudPaper Class="d-flex align-center justify-center mud-width-full py-8">Panel 1</MudPaper>
+			<MudPaper Class="d-flex align-center justify-center mud-width-full mud-height-full py-8">Panel 1</MudPaper>
 		</Panel1>
 
 		<Panel2>
-			<MudPaper Class="d-flex align-center justify-center mud-width-full py-8">Panel 2</MudPaper>
+			<MudPaper Class="d-flex align-center justify-center mud-width-full mud-height-full py-8"> Panel 2</MudPaper>
 		</Panel2>
 
 	</MudResizablePanel>
+	
+	<MudResizablePanel IsVertical="false">
+		
+		<Panel1>
+			<MudPaper Class="d-flex align-center justify-center mud-width-full mud-height-full py-8">Panel 1</MudPaper>
+		</Panel1>
 
+		<Panel2>
+			<MudPaper Class="d-flex align-center justify-center mud-width-full mud-height-full py-8"> Panel 2</MudPaper>
+		</Panel2>
+
+	</MudResizablePanel>
 </div>
 
 @code {

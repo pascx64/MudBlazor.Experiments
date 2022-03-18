@@ -1,21 +1,18 @@
 ﻿@namespace MudBlazor.Experiments
 
-<div class="@(Class) relative d-flex flex-row flex-grow-1" style="@Style">
+<div class="@(Class) relative d-flex @(IsVertical ? "flex-column" : "flex-row") flex-grow-1" style="@Style">
 
-	<div style="height: 100%; width: calc( @(DragWidth)% - 3px ); ">
+	<div style="width: 100%; flex: @(DragWidth)">
 		@Panel1
 	</div>
-	
-	<div style="width: 6px; height: 100%">
-	</div>
 
-	<div style="height: 100%; width: calc( @(100 - DragWidth)% - 3px );">
+	<div style="width: 100%; flex: @(100 - DragWidth)">
 		@Panel2
 	</div>
-	
+
 	<div style="width: 100%; height: 100%; position: absolute;">
-        <input @bind-value="@DragWidth" @bind-value:event="oninput" class="mud-resizable-panel-slider" style="width: 100%" type="range" id="volume" name="volume" min="0" max="100">
-    </div>
+		<input @bind-value="@DragWidth" @bind-value:event="oninput" class="@(IsVertical ? "mud-resizable-panel-slider-vertical" : "mud-resizable-panel-slider-horizontal") mud-resizable-panel-slider" style="width: 100%; height: 100%" type="range" min="0" max="100">
+	</div>
 
 </div>
 
@@ -34,6 +31,9 @@
 
 	[Parameter]
 	public string Style { get; set; } = "";
+
+	[Parameter]
+	public bool IsVertical { get; set; } = false;
 
 	private int DragWidth = 50;
 }

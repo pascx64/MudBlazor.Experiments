@@ -1,15 +1,22 @@
 ﻿
-.mud-resizable-panel-slider {
+
+
+
+
+input.mud-resizable-panel-slider-vertical {
+    transform: rotate(90deg);
 }
+
 
 input.mud-resizable-panel-slider {
     -webkit-appearance: none;
     -moz-appearance: none;
     position: relative;
-    /* display:block; */
+    display: block;
     width: 100%;
-    /* background-color:transparent; */
+    background-color: transparent;
     cursor: pointer;
+    pointer-events: none;
 }
 
     input.mud-resizable-panel-slider:focus {
@@ -18,12 +25,14 @@ input.mud-resizable-panel-slider {
 
     input.mud-resizable-panel-slider::-webkit-slider-runnable-track {
         width: 100%;
-        height: 0;
+        height: 100%;
+        pointer-events: none;
     }
 
     input.mud-resizable-panel-slider::-moz-range-track {
         width: 100%;
         height: 0;
+        pointer-events: none;
     }
 
     input.mud-resizable-panel-slider::-webkit-slider-thumb {
@@ -31,10 +40,11 @@ input.mud-resizable-panel-slider {
         -webkit-appearance: none;
         border: none;
         border-radius: 2px;
-        height: 64px;
+        height: 100%;
         width: 10px;
         transition: box-shadow .2s;
         box-shadow: var(--mud-elevation-25);
+        pointer-events: auto;
     }
 
     input.mud-resizable-panel-slider::-moz-range-thumb {
@@ -42,10 +52,11 @@ input.mud-resizable-panel-slider {
         -webkit-appearance: none;
         border: none;
         border-radius: 2px;
-        height: 64px;
+        height: 100%;
         width: 10px;
         transition: box-shadow .2s;
         box-shadow: var(--mud-elevation-25);
+        pointer-events: auto;
     }
 
     input.mud-resizable-panel-slider::-webkit-slider-runnable-track {
@@ -64,10 +75,18 @@ input.mud-resizable-panel-slider {
         background-color: var(--mud-palette-surface);
     }
 
-    input.mud-resizable-panel-slider::-webkit-slider-thumb:hover {
-        cursor: col-resize;
-    }
+input.mud-resizable-panel-slider-vertical::-webkit-slider-thumb:hover {
+    cursor: row-resize;
+}
 
-    input.mud-resizable-panel-slider::-moz-range-thumb:hover {
-        cursor: col-resize;
-    }
+input.mud-resizable-panel-slider-vertical::-moz-range-thumb:hover {
+    cursor: row-resize;
+}
+
+input.mud-resizable-panel-slider-horizontal::-webkit-slider-thumb:hover {
+    cursor: col-resize;
+}
+
+input.mud-resizable-panel-slider-horizontal::-moz-range-thumb:hover {
+    cursor: col-resize;
+}
