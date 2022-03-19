@@ -35,5 +35,15 @@
 	[Parameter]
 	public bool IsVertical { get; set; } = false;
 
-	private int DragWidth = 50;
+	[Parameter]
+	public int InitialPanel1PercentageSize { get; set; } = 50;
+
+	private int DragWidth;
+
+	protected override void OnInitialized()
+	{
+		base.OnInitialized();
+
+		DragWidth = InitialPanel1PercentageSize;
+	}
 }
