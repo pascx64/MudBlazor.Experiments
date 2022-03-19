@@ -4,6 +4,11 @@
     <TargetFramework>net6.0</TargetFramework>
     <Nullable>enable</Nullable>
     <ImplicitUsings>enable</ImplicitUsings>
+    <GeneratePackageOnBuild>True</GeneratePackageOnBuild>
+    <Version>1.0.1</Version>
+    <PackageProjectUrl>https://github.com/pascx64/MudBlazor.Experiments</PackageProjectUrl>
+    <RepositoryUrl>https://github.com/pascx64/MudBlazor.Experiments</RepositoryUrl>
+    <Authors />
   </PropertyGroup>
 
   <ItemGroup>
