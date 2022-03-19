@@ -20,4 +20,4 @@ jobs:
       working-directory: ./src/MudBlazorExperiments
     - name: Publish
       run: dotnet nuget push *.nupkg --api-key ${{ secrets.NUGET_SECRET }} --source https://api.nuget.org/v3/index.json
-      working-directory: ./src/MudBlazorExperiments/bin/Release/net6.0
+      working-directory: ./src/MudBlazorExperiments/bin/Release
