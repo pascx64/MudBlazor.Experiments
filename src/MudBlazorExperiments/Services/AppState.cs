@@ -40,7 +40,13 @@ namespace MudBlazor.Experiments.Services
         {
             return () => Busy(func());
         }
+
         public Func<T, Task> Busy<T>(Func<T, Task> func)
+        {
+            return x => Busy(func(x));
+        }
+
+        public Func<T, Task> BusyF<T>(Func<T, Task> func)
         {
             return x => Busy(func(x));
         }
