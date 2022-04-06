@@ -35,5 +35,10 @@ namespace MudBlazorExperiments.Services
 
             return task.Result;
         }
+
+        public Func<Task> Busy(Func<Task> func)
+        {
+            return () => Busy(func());
+        }
     }
 }
