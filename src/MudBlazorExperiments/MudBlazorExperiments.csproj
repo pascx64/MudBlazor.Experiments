@@ -5,7 +5,7 @@
     <Nullable>enable</Nullable>
     <ImplicitUsings>enable</ImplicitUsings>
     <GeneratePackageOnBuild>True</GeneratePackageOnBuild>
-    <Version>6.0.6</Version>
+    <Version>6.1.1</Version>
     <PackageProjectUrl>https://github.com/snakex64/MudBlazor.Experiments</PackageProjectUrl>
     <RepositoryUrl>https://github.com/snakex64/MudBlazor.Experiments</RepositoryUrl>
     <Authors />
@@ -14,6 +14,7 @@
 
   <ItemGroup>
     <PackageReference Include="Microsoft.AspNetCore.Components.Web" Version="6.0.3" />
+    <PackageReference Include="MudBlazor" Version="6.0.9" />
   </ItemGroup>
   
   <ItemGroup>
