@@ -4,7 +4,7 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
-namespace MudBlazorExperiments.Services
+namespace MudBlazor.Experiments.Services
 {
     /// <summary>
     /// Globally store the state of the app
@@ -39,6 +39,10 @@ namespace MudBlazorExperiments.Services
         public Func<Task> Busy(Func<Task> func)
         {
             return () => Busy(func());
+        }
+        public Func<T, Task> Busy<T>(Func<T, Task> func)
+        {
+            return x => Busy(func(x));
         }
     }
 }
