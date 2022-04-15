@@ -10,3 +10,5 @@
 /src/MudBlazorExperiments/obj
 /src/MudBlazor.Experiments/obj
 /src/.vs/ProjectEvaluation
+/src/Demos/bin/Release/net6.0
+/src/MudBlazorExperiments/bin/Release
