@@ -11,7 +11,7 @@
   </ItemGroup>
 
   <ItemGroup>
-    <ProjectReference Include="..\MudBlazor.Experiments\MudBlazorExperiments.csproj" />
+    <ProjectReference Include="..\MudBlazorExperiments\MudBlazorExperiments.csproj" />
   </ItemGroup>
 
 </Project>
