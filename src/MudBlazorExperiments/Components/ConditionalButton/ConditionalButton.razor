@@ -1,13 +1,13 @@
 ﻿@namespace MudBlazor.Experiments
 
 <MudStack Row="true" Spacing="0">
-    <MudButton OnClick="@(() => SwitchActivated(true))" Variant="Variant" Color="@(LeftActivated ? Color.Primary : Color.Secondary)" DisableElevation="true" Class="rounded-r-0" Disabled="Disabled">@TextLeft</MudButton>
+    <MudButton OnClick="@(() => SwitchActivated(true))" Variant="Variant" Color="@(LeftActivated ? ActivatedColor : NotActivatedColor)" DisableElevation="true" Class="rounded-r-0" Disabled="Disabled">@TextLeft</MudButton>
     <MudPaper Elevation="0" Width="0px" Class="d-flex align-center justify-center relative pointer-events-none">
         <MudPaper Elevation="0" Height="24px" Width="24px" Class="absolute rounded-circle z-20 d-flex align-center justify-center">
             <MudText Typo="Typo.caption">@MiddleText</MudText>
         </MudPaper>
     </MudPaper>
-    <MudButton OnClick="@(() => SwitchActivated(false))" Variant="Variant" Color="@(LeftActivated ? Color.Secondary : Color.Primary)" DisableElevation="true" Class="rounded-l-0" Disabled="Disabled">@TextRight</MudButton>
+    <MudButton OnClick="@(() => SwitchActivated(false))" Variant="Variant" Color="@(LeftActivated ? NotActivatedColor : ActivatedColor)" DisableElevation="true" Class="rounded-l-0" Disabled="Disabled">@TextRight</MudButton>
 </MudStack>
 
 
@@ -39,6 +39,12 @@
 
     [Parameter]
     public EventCallback OnRightClicked { get; set; }
+
+    [Parameter]
+    public Color ActivatedColor { get; set; } = Color.Primary;
+
+    [Parameter]
+    public Color NotActivatedColor { get; set; } = Color.Secondary;
 
     // Switch activated
     private async Task SwitchActivated(bool leftActivated)

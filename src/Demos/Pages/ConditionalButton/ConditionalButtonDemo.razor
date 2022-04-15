@@ -1,0 +1,17 @@
+﻿@page "/ConditionalButton"
+
+<MudStack Style="width: 1000px; height: 500px;" Spacing="5">
+
+	<ConditionalButton TextLeft="Option A" TextRight="Option B" @bind-LeftActivated="IsOptionA" ActivatedColor="Color.Success" NotActivatedColor="Color.Dark" />
+
+	<MudText>
+		@(IsOptionA ? "Option A!" : "Option B!")
+	</MudText>
+
+</MudStack>
+
+@code {
+
+	private bool IsOptionA { get; set; }
+
+}

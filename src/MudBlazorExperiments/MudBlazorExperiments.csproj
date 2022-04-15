@@ -5,7 +5,7 @@
     <Nullable>enable</Nullable>
     <ImplicitUsings>enable</ImplicitUsings>
     <GeneratePackageOnBuild>True</GeneratePackageOnBuild>
-    <Version>6.1.1</Version>
+    <Version>6.1.2</Version>
     <PackageProjectUrl>https://github.com/snakex64/MudBlazor.Experiments</PackageProjectUrl>
     <RepositoryUrl>https://github.com/snakex64/MudBlazor.Experiments</RepositoryUrl>
     <Authors />
